@@ -1,0 +1,11 @@
+# Stateless
+Stateを管理しているComponentを`Controllable Component`、Stateを管理せずhtmlだけで行っているComponentを`Uncontrollable Component`と定義しています。
+
+## Controllable Component
+現状Statelessコンポーネントにする必要はなく、部品毎に責務をもってstateを管理してくれることを期待しています。
+
+ただReactはライフサイクルが複雑化しやすいと感じているため、責務を全うできているかをチェックする必要があります。
+
+上記のチェックする仕組みがなく、なおかつstateによるバグが頻発するようであれば、習熟度という関連上Uncontrollable componentにし、上位のContainerで処理を集約する必要性があります。
+
+この対応は、Tree構造になっているComponentでどのComponentのstateで、propsの伝播が止まっているかがわかりやすく効果的です。
