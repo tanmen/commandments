@@ -1,6 +1,6 @@
 # Atomic Design
 
-### Atoms
+### Atoms(元素)
 シンプルなコンポーネントであり単体での利用を許可しません。
 
 分解して、atomsが作成できる場合はmoleculesとして利用してください。
@@ -14,7 +14,7 @@ htmlタグのみを利用しているという定義が広義ですが、それ�
 
 逆に再利用できないのに、htmlタグのみを使わなければと思って分解するのは苦痛でしかないのと、それを行ったところで幸せになることはないのでやめましょう。
 
-### Molecules
+### Molecules(分子)
 サイトに依存しないcomponentです。
 サイトやページに依存する処理がありません。
 
@@ -23,7 +23,7 @@ htmlタグのみを利用しているという定義が広義ですが、それ�
 Jobだけに依存する場合ではなく、Recruiterに依存する場合も含まれる可能性があるComponentを作成することを想定しています。
 例: Table等
 
-### Organisms
+### Organisms(有機物)
 サイトに依存した処理が入っています。
 Molecules以下を利用した、サイト固有のロジックを含めたコンポーネント。
 
@@ -33,8 +33,8 @@ Moleculesをwrapし、自身のmodelをpropsに受け取るものも含めます
 サイト内で再利用性の高いものをこちらで利用します。
 JobCardや、JobList等を想定しています。
 
-### Compounds(独自)
-Organismsより上位の存在であり、Organismsを利用するか、`Moleculesをwrapし、自身のmodelをpropsに受け取るものも含めます。`との差別化を図りたい場合に利用します。
+### Inorganisms(独自, 無機物)
+Organismsより下位の存在であり、Organismsを利用するか、`Moleculesをwrapし、自身のmodelをpropsに受け取るものも含めます。`との差別化を図りたい場合に利用します。
 特に必要ない場合は利用する必要はありません。
 
 
